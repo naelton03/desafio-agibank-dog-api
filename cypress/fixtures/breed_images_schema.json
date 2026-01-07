@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "array",
+      "description": "Lista de URLs das imagens da raça",
+      "items": {
+        "type": "string",
+        "format": "uri",
+        "pattern": "^https://images\\.dog\\.ceo/breeds/.*\\.(jpg|jpeg|png)$"
+      },
+      "minItems": 1
+    },
+    "status": {
+      "type": "string",
+      "enum": ["success"]
+    }
+  },
+  "required": ["message", "status"]
+}

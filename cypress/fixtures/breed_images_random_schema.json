@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "description": "URL de uma imagem aleatória de um cachorro",
+      "format": "uri",
+      "pattern": "^https://images\\.dog\\.ceo/breeds/.*\\.(jpg|jpeg|png)$"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["success"]
+    }
+  },
+  "required": ["message", "status"]
+}
